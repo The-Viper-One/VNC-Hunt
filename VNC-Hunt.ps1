@@ -194,7 +194,7 @@ $UltraVNCPaths = @(
     "$env:SystemDrive\Program Files (x86)\UltraVNC\ultravnc.ini"
 )
     
-Function Hunt-VNC {
+Function VNC-Hunt {
     
     <#
     
