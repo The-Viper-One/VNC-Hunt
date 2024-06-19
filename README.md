@@ -1,4 +1,4 @@
-# VNC-Decrypt
+## About
 
 PowerShell script that takes an encrypted VNC password value and decrypts it using a well known fixed key.
 
