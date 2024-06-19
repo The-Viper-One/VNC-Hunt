@@ -29,6 +29,8 @@ function VNC-Decrypt {
         $encryptedBytes[$i / 2] = [Convert]::ToByte($Password.Substring($i, 2), 16)
     }
 
+    try {
+
     $desKey = [byte[]](0xe8, 0x4a, 0xd6, 0x60, 0xc4, 0x72, 0x1a, 0xe0)
     $iv = [byte[]](0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00)
 
@@ -43,5 +45,9 @@ function VNC-Decrypt {
     $decryptedPassword = ([System.Text.Encoding]::ASCII.GetString($decryptedBytes)).Trim([char]0)
 
     Write-Output "VNC Password: $decryptedPassword"
+
+    }
+
+    Catch {Write-Warning "Failure, bad data or insufficient key length supplied"}
 }
 
