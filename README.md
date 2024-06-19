@@ -7,7 +7,7 @@ Load into memory
 ```
 IEX(New-Object System.Net.WebClient).DownloadString("https://raw.githubusercontent.com/The-Viper-One/VNC-Decrypt/main/VNC-Decrypt.ps1")
 ```
-Decrpyt supplied encrypted password value
+Decrypt supplied encrypted password value
 ```
 VNC-Decrypt -Password FACBCF50C3BF1C08
 ```
