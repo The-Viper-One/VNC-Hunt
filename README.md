@@ -1,6 +1,11 @@
 ## About
 
-A small PowerShell script that hunts for local VNC encrypted passwords and decrypts them.
+This PowerShell script searches for VNC passwords stored in the registry and configuration files for various VNC implementations, including RealVNC, TightVNC, TigerVNC, and UltraVNC.
+The script identifies and decrypts these passwords using the DES algorithm with a fixed key. It covers the following VNC implementations:
+ - RealVNC: Searches the registry for VNC server proxy credentials.
+ - TightVNC: Searches the registry for server passwords, control passwords, and view-only passwords.
+ - TigerVNC: Searches the registry for server passwords.
+ - UltraVNC: Searches for passwords in configuration files located in specified directories.
 
 ### Usage
 Load into memory
