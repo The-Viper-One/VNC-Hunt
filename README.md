@@ -21,7 +21,8 @@ Decrypt supplied encrypted password value
 VNC-Decrypt -Password FACBCF50C3BF1C08
 ```
 
-![image](https://github.com/The-Viper-One/VNC-Hunt/assets/68926315/1c94fca8-d8ce-42c2-a997-a4efb90a3ba4)
+![image](https://github.com/The-Viper-One/VNC-Hunt/assets/68926315/28926a62-2b26-4293-b74b-c49a0cf2988e)
+
 
 
 
