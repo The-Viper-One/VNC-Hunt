@@ -215,11 +215,25 @@ Function VNC-Hunt {
     .PARAMETER None
     
     .EXAMPLE
-        Hunt-VNC
+        VNC-Hunt
     #>
     
     Write-Host
     Write-Host
+
+    function CheckAdmin {
+        $currentUser = [System.Security.Principal.WindowsIdentity]::GetCurrent()
+        $principal = New-Object System.Security.Principal.WindowsPrincipal($currentUser)
+        return $principal.IsInRole([System.Security.Principal.WindowsBuiltInRole]::Administrator)
+    }
+
+    if (CheckAdmin) {} 
+    else {
+        Write-Host "[*] " -ForegroundColor "Yellow" -NoNewline
+        Write-Host "Script requires local administrator"
+        break
+    }
+
     
     Search-RealVNC-Passwords
     Search-TightVNC-Passwords
